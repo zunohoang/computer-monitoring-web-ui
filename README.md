@@ -16,9 +16,9 @@ Clone mã nguồn
 1. Clone hoặc mở thư mục dự án:
 
 ````powershell
-git clone <URL-repo-cua-ban>.git
+git clone https://github.com/nkdkhtl/computer-monitoring.git
 cd computer-monitoring
-
+```
 
 2. Cài đặt package:
 
