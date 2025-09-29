@@ -1,73 +1,99 @@
-# React + TypeScript + Vite
+# Computer Monitoring — React + TypeScript + Vite + Tailwind + Ant Design
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Trải nghiệm tại: (cập nhật sau)
 
-Currently, two official plugins are available:
+Computer Monitoring là dự án frontend (demo) sử dụng Vite + React + TypeScript, kết hợp Tailwind CSS và Ant Design để xây dựng giao diện nhanh, hiện đại.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🧰 Công nghệ
 
-## React Compiler
+- Frontend: React, TypeScript, Vite, TailwindCSS, Ant Design
+- Backend: Đang cập nhật
+- Auth/DB: Đang cập nhật
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🚀 Cách chạy dự án
+Clone mã nguồn
 
-## Expanding the ESLint configuration
+1. Clone hoặc mở thư mục dự án:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+````powershell
+git clone <URL-repo-cua-ban>.git
+cd computer-monitoring
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2. Cài đặt package:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```powershell
+npm install
+````
+
+3. Chạy development:
+
+```powershell
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Mặc định chạy tại: http://localhost:5173  
+Đổi cổng khi cần:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```powershell
+npm run dev -- --port 5174
 ```
+
+4. Build production:
+
+```powershell
+npm run build
+```
+
+🛠️ Đóng góp (Contributing)
+
+1. Fork repository
+2. Tạo nhánh mới:
+
+```powershell
+git checkout -b feature/<ten-tinh-nang>
+```
+
+3. Commit thay đổi:
+
+```powershell
+git commit -m "feat: <mo-ta-ngan>"
+```
+
+4. Push lên nhánh:
+
+```powershell
+git push origin feature/<ten-tinh-nang>
+```
+
+5. Tạo Pull Request trên GitHub
+
+📦 Tạo và đẩy GitHub repo
+Nếu dự án chưa phải repo Git:
+
+```powershell
+cd e:\codingStorage\Projects\computer-monitoring
+git init
+git add .
+git commit -m "chore: initial commit"
+```
+
+Thêm remote và đẩy lên:
+
+```powershell
+git branch -M main
+git remote add origin https://github.com/<username>/<repo>.git
+git push -u origin main
+```
+
+- Lỗi Node phiên bản:
+  - Yêu cầu Node.js >= 20.19:
+
+```powershell
+node -v
+```
+
+📞 Liên hệ
+
+- **Tác giả**: [namkhuc](https://github.com/nkdkhtl)
+- **Email**: khucphuongnam2005@gmail.com
