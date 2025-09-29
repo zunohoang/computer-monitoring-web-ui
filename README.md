@@ -1,21 +1,27 @@
-# Computer Monitoring — React + TypeScript + Vite + Tailwind + Ant Design
+# Computer Monitoring
 
 Trải nghiệm tại: (cập nhật sau)
 
 Computer Monitoring là dự án frontend (demo) sử dụng Vite + React + TypeScript, kết hợp Tailwind CSS và Ant Design để xây dựng giao diện nhanh, hiện đại.
 
-🧰 Công nghệ
+## 🧰 Công nghệ sử dụng
 
-- Frontend: React, TypeScript, Vite, TailwindCSS, Ant Design
+- Frontend:
+  - [React](https://react.dev/) – Thư viện xây dựng giao diện người dùng.
+  - [TypeScript](https://www.typescriptlang.org/) – Ngôn ngữ lập trình mở rộng từ JavaScript.
+  - [Vite](https://vitejs.dev/) – Công cụ build và chạy môi trường phát triển nhanh.
+  - [Tailwind CSS](https://tailwindcss.com/) – CSS framework tiện dụng.
+  - [Ant Design](https://ant.design/) – UI component library hiện đại.
 - Backend: Đang cập nhật
 - Auth/DB: Đang cập nhật
 
-🚀 Cách chạy dự án
+## 🚀 Cách chạy dự án
+
 Clone mã nguồn
 
 1. Clone hoặc mở thư mục dự án:
 
-````powershell
+```powershell
 git clone https://github.com/nkdkhtl/computer-monitoring.git
 cd computer-monitoring
 ```
@@ -24,7 +30,7 @@ cd computer-monitoring
 
 ```powershell
 npm install
-````
+```
 
 3. Chạy development:
 
@@ -39,41 +45,29 @@ Mặc định chạy tại: http://localhost:5173
 npm run dev -- --port 5174
 ```
 
-4. Build production:
+## 🛠️ Đóng góp (Contributing)
 
-```powershell
-npm run build
-```
-
-🛠️ Đóng góp (Contributing)
-
-1. Fork repository
-2. Tạo nhánh mới:
+Tạo nhánh mới:
 
 ```powershell
 git checkout -b feature/<ten-tinh-nang>
 ```
 
-3. Commit thay đổi:
+Commit thay đổi:
 
 ```powershell
 git commit -m "feat: <mo-ta-ngan>"
 ```
 
-4. Push lên nhánh:
+Push lên nhánh:
 
 ```powershell
 git push origin feature/<ten-tinh-nang>
 ```
 
-5. Tạo Pull Request trên GitHub
-
-📦 Tạo và đẩy GitHub repo
-Nếu dự án chưa phải repo Git:
+Tạo Pull Request trên GitHub
 
 ```powershell
-cd e:\codingStorage\Projects\computer-monitoring
-git init
 git add .
 git commit -m "chore: initial commit"
 ```
@@ -92,8 +86,3 @@ git push -u origin main
 ```powershell
 node -v
 ```
-
-📞 Liên hệ
-
-- **Tác giả**: [namkhuc](https://github.com/nkdkhtl)
-- **Email**: khucphuongnam2005@gmail.com
