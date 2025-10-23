@@ -1,21 +1,48 @@
-import { Button } from "antd";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { ConfigProvider } from "antd";
+import viVN from "antd/locale/vi_VN";
+import MainLayout from "./components/Layout/MainLayout";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Contests from "./pages/Contests/Contests";
+import ContestDetail from "./pages/ContestDetail/ContestDetail";
+import Rooms from "./pages/Rooms/Rooms";
+import RoomDetail from "./pages/RoomDetail/RoomDetail";
+import Attempts from "./pages/Attempts/Attempts";
+import AttemptDetail from "./pages/AttemptDetail/AttemptDetail";
+import Approvals from "./pages/Approvals/Approvals";
+import Violations from "./pages/Violations/Violations";
+import Messages from "./pages/Messages/Messages";
+import Logs from "./pages/Logs/Logs";
+import Settings from "./pages/Settings/Settings";
+import ProcessMonitor from "./pages/ProcessMonitor/ProcessMonitor";
+import ScreenCaptures from "./pages/ScreenCaptures/ScreenCaptures";
+import "./App.css";
 
 function App() {
-  const handleClick = () => {
-    console.log("AntD button clicked!");
-  };
-
   return (
-    <div className="min-h-screen grid place-items-center p-4">
-      <div className="flex flex-col items-center gap-4 text-center">
-        <h1 className="text-3xl font-bold text-green-600">
-          Hello Vite + React + TS + Tailwind + Ant Design 🚀
-        </h1>
-        <Button type="primary" onClick={handleClick}>
-          AntD Button
-        </Button>
-      </div>
-    </div>
+    <ConfigProvider locale={viVN}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="contests" element={<Contests />} />
+            <Route path="contests/:id" element={<ContestDetail />} />
+            <Route path="rooms" element={<Rooms />} />
+            <Route path="rooms/:id" element={<RoomDetail />} />
+            <Route path="attempts" element={<Attempts />} />
+            <Route path="attempts/:id" element={<AttemptDetail />} />
+            <Route path="approvals" element={<Approvals />} />
+            <Route path="violations" element={<Violations />} />
+            <Route path="processes" element={<ProcessMonitor />} />
+            <Route path="screenshots" element={<ScreenCaptures />} />
+            <Route path="messages" element={<Messages />} />
+            <Route path="logs" element={<Logs />} />
+            <Route path="settings" element={<Settings />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ConfigProvider>
   );
 }
 
